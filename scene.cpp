@@ -252,7 +252,7 @@ void Scene::geneDrum()
 {
     for(int i=0;i<75;i++)
     {
-        rand_list.push_back(qrand()%2+1);
+        rand_list.push_back(qrand()%3+1);
     }
 
     for(int i=0;i<75;i++)
@@ -279,6 +279,18 @@ void Scene::geneDrum()
             addItem(dr2);
             drum_list.push_back(dr2);
         }
+
+        else if(rand_list[i]==3)
+        {
+            Drum *dr3 = new Drum();
+            QPixmap dr3_pic;
+            dr3_pic.load(":/image/img/pullo-3.png");
+            dr3_pic = dr3_pic.scaled(80,80,Qt::KeepAspectRatio);
+            dr3->setPixmap(dr3_pic);
+            dr3->setSpeed(1);
+            addItem(dr3);
+            drum_list.push_back(dr3);
+        }
     }
 }
 
@@ -296,9 +308,21 @@ void Scene::keyPressEvent(QKeyEvent *event)
                     //setPlainText(QString("Score:"+QString::number(sco->score)));
             }
         }
+
         else if(rand_list[i]==2)
         {
             if(event->key()==Qt::Key_K)
+            {
+                if(this->drum_list[i]->x()>pt->pos().x()&&this->drum_list[i]->x()<= pt->pos().x()+pt_w)
+                    removeItem(drum_list[i]);
+                    sco->score++;
+                            //setPlainText(QString("Score:"+QString::number(sco->score)));
+            }
+        }
+
+        else if(rand_list[i]==3)
+        {
+            if(event->key()==Qt::Key_L)
             {
                 if(this->drum_list[i]->x()>pt->pos().x()&&this->drum_list[i]->x()<= pt->pos().x()+pt_w)
                     removeItem(drum_list[i]);
