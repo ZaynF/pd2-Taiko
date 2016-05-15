@@ -1,0 +1,31 @@
+<RCC>
+    <qresource prefix="/image">
+        <file>img/bg.png</file>
+        <file>img/bg_clear.png</file>
+        <file>img/bg_clear_p2.png</file>
+        <file>img/bg_miss.png</file>
+        <file>img/bg_miss_clear.png</file>
+        <file>img/bg_miss_clear_p2.png</file>
+        <file>img/bg_miss_p2.png</file>
+        <file>img/bg_p2.png</file>
+        <file>img/icon.jpg</file>
+        <file>img/mob.png</file>
+        <file>img/start.jpg</file>
+        <file>img/close.png</file>
+        <file>img/go.png</file>
+        <file>img/begin.png</file>
+        <file>img/quit.png</file>
+        <file>img/hamepage1.png</file>
+        <file>img/return.png</file>
+        <file>img/drum1.png</file>
+        <file>img/drum2.png</file>
+        <file>img/pullo-1.png</file>
+        <file>img/pullo-2.png</file>
+        <file>img/startpage.jpg</file>
+        <file>img/gamepage.jpg</file>
+        <file>img/point.png</file>
+    </qresource>
+    <qresource prefix="/sound">
+        <file>sound/The Beginning1.wav</file>
+    </qresource>
+</RCC>
